@@ -11,9 +11,4 @@ public class BoardTests {
 		new Board();
 	}
 	
-	@Test
-	public void shouldGetAField() {
-		Board b = new Board();
-		b.getField(1,1);
-	}
 }
