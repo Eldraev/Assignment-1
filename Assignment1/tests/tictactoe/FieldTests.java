@@ -28,5 +28,12 @@ public class FieldTests {
 		f.setValue(FieldState.Circle);
 	}
 	
+	@Test
+	public void shouldReturnCorrectValue() {
+		Field f = new Field(FieldState.Circle);
+		assertEquals(f.getValue(),FieldState.Circle);
+		
+	}
+	
 }
 
