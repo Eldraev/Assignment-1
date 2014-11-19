@@ -20,4 +20,10 @@ public class Board {
 		return fields[x][y];
 	}
 	
+	public void clear() {
+		for(int x=0;x<3;x++) {
+			for(int y=0;y<3;y++) 
+				fields[x][y] = new Field();
+		}
+	}
 }
