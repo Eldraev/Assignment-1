@@ -17,7 +17,7 @@ public class Field {
 	}
 	
 	public void setValue(FieldState fs) {
-		
+		state = fs;
 	}
 	
 }
