@@ -16,5 +16,11 @@ public class FieldTests {
 		new Field(FieldState.Empty);
 	}
 	
+	@Test
+	public void shouldGetFieldValue() {
+		Field f = new Field();
+		f.getValue();
+	}
+	
 }
 
