@@ -22,5 +22,11 @@ public class FieldTests {
 		f.getValue();
 	}
 	
+	@Test
+	public void shouldSetFieldValue() {
+		Field f = new Field();
+		f.setValue(FieldState.Circle);
+	}
+	
 }
 
