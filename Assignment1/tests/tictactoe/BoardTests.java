@@ -46,4 +46,13 @@ public class BoardTests {
 		}
 	}
 	
+	@Test
+	public void shouldInitWithEmptyField() {
+		Board b = new Board();
+		for(int x=0;x<3;x++) {
+			for(int y=0;y<3;y++) 
+				assertEquals(b.getField(x, y).getValue(),FieldState.Empty);
+		}
+	}
+	
 }
