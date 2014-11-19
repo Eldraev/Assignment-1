@@ -11,5 +11,10 @@ public class FieldTests {
 		new Field();
 	}
 	
+	@Test
+	public void shouldCreateWithState() {
+		new Field(FieldState.Empty);
+	}
+	
 }
 
