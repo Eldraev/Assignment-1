@@ -29,5 +29,11 @@ public class FieldTests {
 		assertEquals(f.getValue(),FieldState.Circle);
 	}
 	
+	@Test
+	public void shouldInitializeWithValue() {
+		Field f = new Field();
+		assertEquals(f.getValue(),FieldState.Empty);
+	}
+	
 }
 
