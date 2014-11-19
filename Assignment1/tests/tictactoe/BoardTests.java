@@ -14,47 +14,32 @@ public class BoardTests {
 	@Test
 	public void shouldGetField() {
 		Board b = new Board();
-		Field f = b.getField(1,1);
+		b.getField(1,1);
 	}
 	
 	@Test
-	public void shouldThrowOnOutOfDimensionsX() {
+	public void shouldThrowOnOutOfDimensions() {
 		Board b = new Board();
 		try {
-			Field f = b.getField(-1, 2);
+			b.getField(-1, 2);
 			fail();
 		} catch(IllegalArgumentException e) {
 			
 		}
-	}
-	
-	@Test
-	public void shouldThrowOnOutOfDimensionsY() {
-		Board b = new Board();
 		try {
-			Field f = b.getField(2, -2);
+			b.getField(0, -8);
 			fail();
 		} catch(IllegalArgumentException e) {
 			
 		}
-	}
-	
-	@Test
-	public void shouldThrowOnOutOfDimensionsXUpper() {
-		Board b = new Board();
 		try {
-			Field f = b.getField(3, 2);
+			b.getField(3, 2);
 			fail();
 		} catch(IllegalArgumentException e) {
 			
 		}
-	}
-	
-	@Test
-	public void shouldThrowOnOutOfDimensionsYUpper() {
-		Board b = new Board();
 		try {
-			Field f = b.getField(0, 7);
+			b.getField(0, 7);
 			fail();
 		} catch(IllegalArgumentException e) {
 			

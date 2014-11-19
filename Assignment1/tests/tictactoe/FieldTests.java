@@ -22,7 +22,7 @@ public class FieldTests {
 	@Test
 	public void shouldNotTakeNull() {
 		try{
-			Field f = new Field(null);
+			new Field(null);
 			fail();
 		} catch(IllegalArgumentException e) {
 		}
