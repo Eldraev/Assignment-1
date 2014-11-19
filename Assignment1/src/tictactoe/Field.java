@@ -5,11 +5,11 @@ public class Field {
 	public FieldState state;
 	
 	public Field() {
-		state = FieldState.Empty;
+		setValue(FieldState.Empty);
 	}
 	
 	public Field(FieldState fs) {
-		state = fs;
+		setValue(fs);
 	}
 	
 	public FieldState getValue() {
