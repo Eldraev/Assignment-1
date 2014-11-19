@@ -39,4 +39,15 @@ public class BoardTests {
 		}
 	}
 	
+	@Test
+	public void shouldThrowOnOutOfDimensionsXUpper() {
+		Board b = new Board();
+		try {
+			Field f = b.getField(3, 2);
+			fail();
+		} catch(IllegalArgumentException e) {
+			
+		}
+	}
+	
 }
