@@ -8,10 +8,7 @@ public class Board {
 	
 	public Board() {
 		fields = new Field[3][3];
-		for(int x=0;x<3;x++) {
-			for(int y=0;y<3;y++) 
-				fields[x][y] = new Field();
-		}
+		clear();
 	}
 	
 	public Field getField(int x, int y) {
