@@ -9,6 +9,9 @@ public class Field {
 	}
 	
 	public Field(FieldState fs) {
+		if(fs == null) {
+			throw new IllegalArgumentException("Invalid FieldState!");
+		}
 		setValue(fs);
 	}
 	
