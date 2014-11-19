@@ -18,10 +18,21 @@ public class BoardTests {
 	}
 	
 	@Test
-	public void shouldThrowOnOutOfDimensions() {
+	public void shouldThrowOnOutOfDimensionsX() {
 		Board b = new Board();
 		try {
 			Field f = b.getField(-1, 2);
+			fail();
+		} catch(IllegalArgumentException e) {
+			
+		}
+	}
+	
+	@Test
+	public void shouldThrowOnOutOfDimensionsY() {
+		Board b = new Board();
+		try {
+			Field f = b.getField(2, -2);
 			fail();
 		} catch(IllegalArgumentException e) {
 			
