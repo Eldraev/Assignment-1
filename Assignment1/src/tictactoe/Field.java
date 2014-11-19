@@ -10,4 +10,8 @@ public class Field {
 		
 	}
 	
+	public FieldState getValue() {
+		return null;
+	}
+	
 }
