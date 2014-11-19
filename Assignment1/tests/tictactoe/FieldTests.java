@@ -25,7 +25,6 @@ public class FieldTests {
 			Field f = new Field(null);
 			fail();
 		} catch(IllegalArgumentException e) {
-			
 		}
 	}
 }
