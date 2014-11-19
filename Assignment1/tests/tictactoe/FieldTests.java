@@ -16,8 +16,17 @@ public class FieldTests {
 	public void shouldChangeValue() {
 		Field f = new Field();
 		f.setValue(FieldState.Cross);
-		assertEquals(f.getValue(),FieldState.Cross);
-		
+		assertEquals(f.getValue(),FieldState.Cross);	
+	}
+	
+	@Test
+	public void shouldNotTakeNull() {
+		try{
+			Field f = new Field(null);
+			fail();
+		} catch(IllegalArgumentException e) {
+			
+		}
 	}
 }
 
