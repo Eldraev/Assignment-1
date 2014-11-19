@@ -12,11 +12,6 @@ public class FieldTests {
 	}
 	
 	@Test
-	public void shouldCreateWithState() {
-		new Field(FieldState.Empty);
-	}
-	
-	@Test
 	public void shouldGetFieldValue() {
 		Field f = new Field();
 		f.getValue();
@@ -32,7 +27,6 @@ public class FieldTests {
 	public void shouldReturnCorrectValue() {
 		Field f = new Field(FieldState.Circle);
 		assertEquals(f.getValue(),FieldState.Circle);
-		
 	}
 	
 }
