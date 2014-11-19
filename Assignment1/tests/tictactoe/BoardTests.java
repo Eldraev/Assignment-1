@@ -38,10 +38,7 @@ public class BoardTests {
 	@Test
 	public void shouldInitWithEmptyField() {
 		Board b = new Board();
-		for(int x=0;x<3;x++) {
-			for(int y=0;y<3;y++) 
-				assertEquals(b.getField(x, y).getValue(),FieldState.Empty);
-		}
+		checkBoardFor(b,FieldState.Empty);
 	}
 	
 	@Test
@@ -49,9 +46,13 @@ public class BoardTests {
 		Board b = new Board();
 		b.getField(1, 1).setValue(FieldState.Circle);
 		b.clear();
+		checkBoardFor(b,FieldState.Empty);
+	}
+	
+	private void checkBoardFor(Board b, FieldState fs) {
 		for(int x=0;x<3;x++) {
 			for(int y=0;y<3;y++) 
-				assertEquals(b.getField(x, y).getValue(),FieldState.Empty);
+				assertEquals(b.getField(x, y).getValue(),fs);
 		}
 	}
 	
