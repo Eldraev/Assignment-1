@@ -14,4 +14,8 @@ public class Field {
 		return null;
 	}
 	
+	public void setValue(FieldState fs) {
+		
+	}
+	
 }
