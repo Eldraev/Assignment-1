@@ -2,7 +2,7 @@ package tictactoe;
 
 public class Field {
 	
-	public FieldState state;
+	private FieldState state;
 	
 	public Field() {
 		setValue(FieldState.Empty);
