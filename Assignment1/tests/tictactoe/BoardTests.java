@@ -44,4 +44,15 @@ public class BoardTests {
 		}
 	}
 	
+	@Test
+	public void shouldEmptyField() {
+		Board b = new Board();
+		b.getField(1, 1).setValue(FieldState.Circle);
+		b.clear();
+		for(int x=0;x<3;x++) {
+			for(int y=0;y<3;y++) 
+				assertEquals(b.getField(x, y).getValue(),FieldState.Empty);
+		}
+	}
+	
 }
