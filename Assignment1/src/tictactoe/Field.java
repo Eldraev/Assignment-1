@@ -5,7 +5,7 @@ public class Field {
 	public FieldState state;
 	
 	public Field() {
-		
+		state = FieldState.Empty;
 	}
 	
 	public Field(FieldState fs) {
