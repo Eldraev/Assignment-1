@@ -13,6 +13,8 @@ public class View {
 	}
 	
 	public void printFieldState(FieldState fs) {
+		if(fs == null)
+			throw new IllegalArgumentException("Invalid Input!");
 		switch(fs) {
 		case Circle: System.out.println("O"); break;
 		case Cross: System.out.println("X"); break;
