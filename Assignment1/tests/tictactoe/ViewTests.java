@@ -9,13 +9,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import tictactoe.Model.FieldState;
 import tictactoe.View.View;
-
 import static org.mockito.Mockito.*;
-import static org.mockito.Mockito.doThrow;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
 import static org.mockito.Matchers.anyString;
 
 public class ViewTests {
@@ -40,6 +36,13 @@ public class ViewTests {
 		View v = new View();
 		v.notifyPlayer();
 		verify(mockStream).println("It's your turn: ");
+	}
+	
+	@Test
+	public void shouldPrintFieldState() {
+		View v = new View();
+		v.printFieldState(FieldState.Circle);
+		verify(mockStream).println("O");
 	}
 	
 	@After
