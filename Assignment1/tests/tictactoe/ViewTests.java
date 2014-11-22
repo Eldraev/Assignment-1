@@ -39,10 +39,17 @@ public class ViewTests {
 	}
 	
 	@Test
-	public void shouldPrintFieldState() {
+	public void shouldPrintFieldStateCircle() {
 		View v = new View();
 		v.printFieldState(FieldState.Circle);
 		verify(mockStream).println("O");
+	}
+	
+	@Test
+	public void shouldPrintFieldStateCross() {
+		View v = new View();
+		v.printFieldState(FieldState.Cross);
+		verify(mockStream).println("X");
 	}
 	
 	@After
