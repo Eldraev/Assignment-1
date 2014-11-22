@@ -13,7 +13,10 @@ public class View {
 	}
 	
 	public void printFieldState(FieldState fs) {
-		System.out.println("O");
+		switch(fs) {
+		case Circle: System.out.println("O"); break;
+		case Cross: System.out.println("X"); break;
+		}
 	}
 	
 }
