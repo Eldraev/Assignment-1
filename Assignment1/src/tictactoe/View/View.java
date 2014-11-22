@@ -6,4 +6,8 @@ public class View {
 		
 	}
 	
+	public void notifyPlayer() {
+		System.out.println("It's your turn: ");
+	}
+	
 }
