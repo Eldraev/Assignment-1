@@ -27,11 +27,6 @@ public class ViewTests {
 	}
 	
 	@Test
-	public void shouldCreateAInstance() {
-		new View();
-	}
-	
-	@Test
 	public void shouldWriteMessageToPlayer() {
 		View v = new View();
 		v.notifyPlayer();
@@ -39,17 +34,10 @@ public class ViewTests {
 	}
 	
 	@Test
-	public void shouldPrintFieldStateCircle() {
-		View v = new View();
-		v.printFieldState(FieldState.Circle);
-		verify(mockStream).println("O");
-	}
-	
-	@Test
-	public void shouldPrintFieldStateCross() {
-		View v = new View();
-		v.printFieldState(FieldState.Cross);
-		verify(mockStream).println("X");
+	public void shouldPrintFieldState() {
+		testFieldStateOutput(FieldState.Circle, "O");
+		testFieldStateOutput(FieldState.Cross, "X");
+		testFieldStateOutput(FieldState.Empty, " ");
 	}
 	
 	@Test
@@ -63,16 +51,15 @@ public class ViewTests {
 		}
 	}
 	
-	@Test
-	public void shouldPrintFieldStateEmpty() {
-		View v = new View();
-		v.printFieldState(FieldState.Empty);
-		verify(mockStream).println(" ");
-	}
-	
 	@After
 	public void resetOutput() {
 		System.setOut(originalOutput);
+	}
+	
+	private void testFieldStateOutput(FieldState fs, String output) {
+		View v = new View();
+		v.printFieldState(fs);
+		verify(mockStream).println(output);
 	}
 	
 }
