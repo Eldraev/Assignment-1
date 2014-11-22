@@ -52,6 +52,17 @@ public class ViewTests {
 		verify(mockStream).println("X");
 	}
 	
+	@Test
+	public void shouldThrowOnNullPrint() {
+		View v = new View();
+		try {
+			v.printFieldState(null);
+			fail();
+		} catch(IllegalArgumentException e) {
+			
+		}
+	}
+	
 	@After
 	public void resetOutput() {
 		System.setOut(originalOutput);
