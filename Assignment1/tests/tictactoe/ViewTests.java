@@ -63,6 +63,13 @@ public class ViewTests {
 		}
 	}
 	
+	@Test
+	public void shouldPrintFieldStateEmpty() {
+		View v = new View();
+		v.printFieldState(FieldState.Empty);
+		verify(mockStream).println(" ");
+	}
+	
 	@After
 	public void resetOutput() {
 		System.setOut(originalOutput);
