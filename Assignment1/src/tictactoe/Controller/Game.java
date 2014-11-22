@@ -1,4 +1,4 @@
-package tictactoe;
+package tictactoe.Controller;
 
 public class Game {
 

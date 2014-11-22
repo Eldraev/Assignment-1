@@ -1,4 +1,5 @@
-package tictactoe;
+package tictactoe.Model;
+
 
 public class Field {
 	

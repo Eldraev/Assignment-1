@@ -4,6 +4,9 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import tictactoe.Model.Board;
+import tictactoe.Model.FieldState;
+
 public class BoardTests {
 	
 	@Test

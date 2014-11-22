@@ -1,4 +1,4 @@
-package tictactoe;
+package tictactoe.Model;
 
 public enum FieldState {
 	Empty,
