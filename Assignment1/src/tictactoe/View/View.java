@@ -24,6 +24,8 @@ public class View {
 	}
 	
 	public void drawBoard(Field[][] board) {
+		if(board == null)
+			throw new IllegalArgumentException("Invalid Input!");
 		for(int y = 0; y<board.length; y++) {
 			for(int x = 0; x<board[y].length; x++) {
 				printFieldState(board[y][x].getValue());
