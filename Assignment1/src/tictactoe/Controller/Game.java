@@ -88,7 +88,17 @@ public class Game {
 	}
 	
 	public boolean checkForWin() {
-		return true;
+		for(int i=0;i<3;i++) {
+			if(board.getField(i, 0).getValue() == board.getField(i, 1).getValue() 
+			&& board.getField(i, 1).getValue() == board.getField(i, 2).getValue() 
+			&& board.getField(i, 0).getValue() != FieldState.Empty)
+				return true;
+			if(board.getField(0, i).getValue() == board.getField(1, i).getValue() 
+					&& board.getField(1, i).getValue() == board.getField(2, i).getValue() 
+					&& board.getField(0, i).getValue() != FieldState.Empty)
+						return true;
+		} 
+		return false;
 	}
 	
 }
