@@ -13,4 +13,10 @@ public class GameTests {
 		new Game();
 	}
 	
+	@Test
+	public void shouldPlayGame() {
+		Game g = new Game();
+		g.play();
+	}
+	
 }
