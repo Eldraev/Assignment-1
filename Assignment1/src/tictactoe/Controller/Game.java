@@ -1,5 +1,7 @@
 package tictactoe.Controller;
 
+import java.util.Scanner;
+
 import tictactoe.Model.Board;
 import tictactoe.View.View;
 
@@ -19,6 +21,9 @@ public class Game {
 	}
 	
 	public int getInput() {
+		Scanner scan = new Scanner(System.in);
+		if(scan.hasNextLine())
+			scan.nextLine();
 		return 0;
 	}
 	
