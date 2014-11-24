@@ -24,18 +24,17 @@ public class View {
 	}
 	
 	public void drawBoard(Field[][] board) {
-		System.out.print(" ");
-		System.out.print(" ");
-		System.out.print(" ");
-		System.out.print("\n");
-		System.out.print(" ");
-		System.out.print(" ");
-		System.out.print(" ");
-		System.out.print("\n");
-		System.out.print(" ");
-		System.out.print(" ");
-		System.out.print(" ");
-		System.out.print("\n");
+		for(int y = 0; y<board.length; y++) {
+			for(int x = 0; x<board[y].length; x++) {
+				switch(board[y][x].getValue()) {
+				case Cross:
+					System.out.print("X"); break;
+				case Empty:
+					System.out.print(" "); break;
+				}
+			}
+			System.out.print("\n");
+		}
 	}
 	
 }
