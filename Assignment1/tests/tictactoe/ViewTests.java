@@ -53,44 +53,6 @@ public class ViewTests {
 		}
 	}
 	
-	@Test
-	public void shouldDrawCrossedBoard() {
-		View v = new View();
-		Field[][] testBoard = new Field[3][3];
-		for(Field[] fa : testBoard) {
-			for(Field f : fa) {
-				f = new Field(FieldState.Cross);
-			}
-		}
-		v.drawBoard(testBoard);
-		InOrder inOrder = inOrder(mockStream);
-		inOrder.verify(mockStream, times(3)).print("X");
-		inOrder.verify(mockStream, times(1)).print("\n");
-		inOrder.verify(mockStream, times(3)).print("X");
-		inOrder.verify(mockStream, times(1)).print("\n");
-		inOrder.verify(mockStream, times(3)).print("X");
-		inOrder.verify(mockStream, times(1)).print("\n");
-	}
-	
-	@Test
-	public void shouldDrawEmptyBoard() {
-		View v = new View();
-		Field[][] testBoard = new Field[3][3];
-		for(Field[] fa : testBoard) {
-			for(Field f : fa) {
-				f = new Field();
-			}
-		}
-		v.drawBoard(testBoard);
-		InOrder inOrder = inOrder(mockStream);
-		inOrder.verify(mockStream, times(3)).print(" ");
-		inOrder.verify(mockStream, times(1)).print("\n");
-		inOrder.verify(mockStream, times(3)).print(" ");
-		inOrder.verify(mockStream, times(1)).print("\n");
-		inOrder.verify(mockStream, times(3)).print(" ");
-		inOrder.verify(mockStream, times(1)).print("\n");
-	}
-	
 	@After
 	public void resetOutput() {
 		System.setOut(originalOutput);
