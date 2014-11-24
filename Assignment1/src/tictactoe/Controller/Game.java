@@ -60,7 +60,9 @@ public class Game {
 	}
 	
 	public void setField(int x, int y, FieldState fs) {
-		 board.getField(x, y).setValue(fs);
+		if(!isFieldFree(x,y))
+			throw new IllegalArgumentException();
+		board.getField(x, y).setValue(fs);
 	}
 	
 }
