@@ -1,5 +1,6 @@
 package tictactoe.View;
 
+import tictactoe.Model.Field;
 import tictactoe.Model.FieldState;
 
 public class View {
@@ -20,6 +21,10 @@ public class View {
 		case Cross: System.out.println("X"); break;
 		case Empty: System.out.println(" "); break;
 		}
+	}
+	
+	public void drawBoard(Field[][] board) {
+		System.out.println(" | | \n-----\n | | \n-----\n | | ");
 	}
 	
 }
