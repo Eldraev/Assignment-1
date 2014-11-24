@@ -33,18 +33,6 @@ public class GameTests {
 	}
 	
 	@Test
-	public void shouldShowDialog() {
-		View mockView = mock(View.class);
-		Game g = new Game(mockView);
-		g.play();
-		InOrder inOrder = inOrder(mockView);
-		inOrder.verify(mockView).drawBoard(any(Field[][].class));
-		inOrder.verify(mockView).notifyPlayer();
-		inOrder.verify(mockView).askForColumn();
-		inOrder.verify(mockView).askForRow();
-	}
-	
-	@Test
 	public void shouldAskForInputAfterDialog() {
 		View mockView = mock(View.class);
 		Game g = new Game(mockView);
