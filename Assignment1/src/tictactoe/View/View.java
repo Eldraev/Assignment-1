@@ -23,6 +23,19 @@ public class View {
 		}
 	}
 	
-
+	public void drawBoard(Field[][] board) {
+		System.out.print("X");
+		System.out.print("X");
+		System.out.print("X");
+		System.out.print("\n");
+		System.out.print("X");
+		System.out.print("X");
+		System.out.print("X");
+		System.out.print("\n");
+		System.out.print("X");
+		System.out.print("X");
+		System.out.print("X");
+		System.out.print("\n");
+	}
 	
 }
