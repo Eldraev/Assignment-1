@@ -70,7 +70,25 @@ public class ViewTests {
 		inOrder.verify(mockStream, times(1)).print("\n");
 		inOrder.verify(mockStream, times(3)).print(" ");
 		inOrder.verify(mockStream, times(1)).print("\n");
-		
+	}
+	
+	@Test
+	public void shouldDrawCrossedBoard() {
+		View v = new View();
+		Field[][] testBoard = new Field[3][3];
+		for(int y = 0; y<testBoard.length; y++) {
+			for(int x = 0; x<testBoard[y].length; x++) {
+				testBoard[y][x] = new Field(FieldState.Cross);
+			}
+		}
+		v.drawBoard(testBoard);
+		InOrder inOrder = inOrder(mockStream);
+		inOrder.verify(mockStream, times(3)).print("X");
+		inOrder.verify(mockStream, times(1)).print("\n");
+		inOrder.verify(mockStream, times(3)).print("X");
+		inOrder.verify(mockStream, times(1)).print("\n");
+		inOrder.verify(mockStream, times(3)).print("X");
+		inOrder.verify(mockStream, times(1)).print("\n");
 	}
 	
 	@After
