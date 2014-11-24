@@ -244,6 +244,12 @@ public class GameTests {
 		 assertEquals(inequalityCounter,2);
 	 }	
 	 
+	 @Test
+	 public void shouldSetPlaying() {
+		 Game g = new Game(new View());
+		 g.setPlaying(false);
+	 }
+	 
 	@After
 	public void resetOutput() {
 		System.setIn(originalInput);
