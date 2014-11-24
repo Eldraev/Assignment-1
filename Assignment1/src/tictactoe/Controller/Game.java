@@ -11,10 +11,12 @@ public class Game {
 
 	private Board board;
 	private View view;
+	private boolean playing;
 	
 	public Game(View v) {
 		view = v;
 		board = new Board();
+		playing = true;
 	}
 	
 	public void play() {
@@ -53,11 +55,11 @@ public class Game {
 	}
 	
 	public void setPlaying(boolean b) {
-		
+		playing = b;
 	}
 	
 	public boolean isPlaying() {
-		return true;
+		return playing;
 	}
 	
 	public void clearBoard() {
