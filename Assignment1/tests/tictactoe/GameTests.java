@@ -148,6 +148,13 @@ public class GameTests {
 		 }
 	 }
 	 
+	 @Test
+	 public void shouldComputeAITurn() {
+		 Game g = new Game(new View());
+		 g.doAITurn();
+		 
+	 }
+	 
 	@After
 	public void resetOutput() {
 		System.setIn(originalInput);
