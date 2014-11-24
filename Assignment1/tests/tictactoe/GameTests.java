@@ -197,6 +197,15 @@ public class GameTests {
 		 assertTrue(g.checkForWin());
 	 }
 	 
+	 @Test
+	 public void shouldNotFindWin() {
+		 Game g = new Game(new View());
+		 g.setField(1, 1, FieldState.Circle);
+		 g.setField(1, 2, FieldState.Cross);
+		 g.setField(1, 3, FieldState.Circle);
+		 assertFalse(g.checkForWin());
+	 }
+	 
 	@After
 	public void resetOutput() {
 		System.setIn(originalInput);
