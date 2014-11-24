@@ -60,7 +60,7 @@ public class Game {
 	}
 	
 	public void setField(int x, int y, FieldState fs) {
-		
+		 board.getField(x, y).setValue(fs);
 	}
 	
 }
