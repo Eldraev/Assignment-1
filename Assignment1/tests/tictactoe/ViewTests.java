@@ -70,7 +70,6 @@ public class ViewTests {
 		inOrder.verify(mockStream, times(1)).print("\n");
 		inOrder.verify(mockStream, times(3)).print("X");
 		inOrder.verify(mockStream, times(1)).print("\n");
-		
 	}
 	
 	
