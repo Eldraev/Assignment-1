@@ -124,6 +124,12 @@ public class GameTests {
 		g.getBoard();
 	}
 	
+	@Test
+	public void shouldGetBoardThatNotNull() {
+		Game g = new Game(new View());
+		assertTrue(g.getBoard()!=null);
+	}
+	
 	@After
 	public void resetOutput() {
 		System.setIn(originalInput);
