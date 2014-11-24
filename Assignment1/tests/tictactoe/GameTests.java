@@ -118,6 +118,12 @@ public class GameTests {
 		g.clearBoard();
 	}
 	
+	@Test
+	public void shouldGetBoard() {
+		Game g = new Game(new View());
+		g.getBoard();
+	}
+	
 	@After
 	public void resetOutput() {
 		System.setIn(originalInput);
