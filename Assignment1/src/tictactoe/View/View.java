@@ -17,9 +17,9 @@ public class View {
 		if(fs == null)
 			throw new IllegalArgumentException("Invalid Input!");
 		switch(fs) {
-		case Circle: System.out.println("O"); break;
-		case Cross: System.out.println("X"); break;
-		case Empty: System.out.println(" "); break;
+		case Circle: System.out.print("O"); break;
+		case Cross: System.out.print("X"); break;
+		case Empty: System.out.print(" "); break;
 		}
 	}
 	
