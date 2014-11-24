@@ -64,11 +64,11 @@ public class ViewTests {
 		}
 		v.drawBoard(testBoard);
 		InOrder inOrder = inOrder(mockStream);
-		inOrder.verify(mockStream, times(3)).print("X");
+		inOrder.verify(mockStream, times(3)).print(" ");
 		inOrder.verify(mockStream, times(1)).print("\n");
-		inOrder.verify(mockStream, times(3)).print("X");
+		inOrder.verify(mockStream, times(3)).print(" ");
 		inOrder.verify(mockStream, times(1)).print("\n");
-		inOrder.verify(mockStream, times(3)).print("X");
+		inOrder.verify(mockStream, times(3)).print(" ");
 		inOrder.verify(mockStream, times(1)).print("\n");
 		
 	}
