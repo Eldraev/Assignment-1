@@ -65,6 +65,19 @@ public class GameTests {
 		} 
 	}
 	
+	@Test
+	public void shouldThrowOnGreaterThanThree() {
+		int testInt = 6;
+		Game g = new Game(new View());
+		System.setIn(new ByteArrayInputStream( (testInt+"").getBytes()));
+		try{
+			g.getInput();
+			fail();
+		} catch(IllegalArgumentException e) {
+			
+		} 
+	}
+	
 	@After
 	public void resetOutput() {
 		System.setIn(originalInput);
