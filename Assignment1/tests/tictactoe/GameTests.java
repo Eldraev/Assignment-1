@@ -119,12 +119,6 @@ public class GameTests {
 	}
 	
 	@Test
-	public void shouldGetBoard() {
-		Game g = new Game(new View());
-		g.getBoard();
-	}
-	
-	@Test
 	public void shouldGetBoardThatNotNull() {
 		Game g = new Game(new View());
 		assertTrue(g.getBoard()!=null);
