@@ -107,12 +107,6 @@ public class GameTests {
 	}
 	
 	@Test
-	public void shouldCheckIfFieldIsFree() {
-		Game g = new Game(new View());
-		g.isFieldFree(1,1);	
-	}
-	
-	@Test
 	public void shouldGiveFreeField() {
 		Game g = new Game(new View());
 		assertTrue(g.isFieldFree(1,1));	
