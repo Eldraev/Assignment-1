@@ -115,7 +115,9 @@ public class GameTests {
 	@Test
 	public void shouldStartNewBoard() {
 		Game g = new Game(new View());
+		g.getBoard().getField(1, 1).setValue(FieldState.Circle);
 		g.clearBoard();
+		assertEquals(g.getBoard().getField(1, 1).getValue(),FieldState.Empty);
 	}
 	
 	@Test
