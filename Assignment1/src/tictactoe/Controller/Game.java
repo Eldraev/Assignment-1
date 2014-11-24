@@ -66,4 +66,8 @@ public class Game {
 		board.getField(x, y).setValue(fs);
 	}
 	
+	public void doAITurn() {
+		
+	}
+	
 }
