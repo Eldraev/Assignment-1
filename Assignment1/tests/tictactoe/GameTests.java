@@ -3,6 +3,8 @@ package tictactoe;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintStream;
 
@@ -20,12 +22,12 @@ import tictactoe.View.View;
 public class GameTests {
 	
 	private InputStream originalInput;
-	private InputStream mockInput;
+	private ByteArrayInputStream mockInput;
 	
 	@Before
 	public void mockInput() {
 		originalInput = System.in;
-		mockInput = mock(InputStream.class);
+		mockInput = mock(ByteArrayInputStream.class);
 		System.setIn(mockInput);
 	}
 	
@@ -56,6 +58,14 @@ public class GameTests {
 	public void shouldCallGetInput() {
 		Game g = new Game(new View());
 		g.getInput();
+	}
+	
+	@Test
+	public void shouldTakeInputFromStream() {
+		Game g = new Game(new View());
+		g.getInput();
+		InOrder inOrder = inOrder(mockInput);
+		inOrder.verify(mockInput).read(any(byte[].class),any(int.class),any(int.class));
 	}
 	
 	@After
