@@ -59,4 +59,8 @@ public class Game {
 		return board;
 	}
 	
+	public void setField(int x, int y, FieldState fs) {
+		
+	}
+	
 }
