@@ -86,7 +86,7 @@ public class Game {
 	}
 	
 	public boolean checkForWin() {
-		return false;
+		return true;
 	}
 	
 }
