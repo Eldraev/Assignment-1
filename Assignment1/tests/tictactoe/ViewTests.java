@@ -118,7 +118,7 @@ public class ViewTests {
 	private void testFieldStateOutput(FieldState fs, String output) {
 		View v = new View();
 		v.printFieldState(fs);
-		verify(mockStream).println(output);
+		verify(mockStream).print(output);
 	}
 	
 }
