@@ -51,7 +51,7 @@ public class Game {
 	}
 	
 	public void clearBoard() {
-		
+		board.clear();
 	}
 	
 	public Board getBoard() {
