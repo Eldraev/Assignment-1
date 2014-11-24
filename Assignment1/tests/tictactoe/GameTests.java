@@ -113,6 +113,13 @@ public class GameTests {
 	}
 	
 	@Test
+	public void shouldNotGiveFreeField() {
+		Game g = new Game(new View());
+		g.getBoard().getField(1, 1).setValue(FieldState.Cross);
+		assertFalse(g.isFieldFree(1, 1));
+	}
+	
+	@Test
 	public void shouldStartNewBoard() {
 		Game g = new Game(new View());
 		g.getBoard().getField(1, 1).setValue(FieldState.Circle);
