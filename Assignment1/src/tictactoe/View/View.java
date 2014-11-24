@@ -1,5 +1,6 @@
 package tictactoe.View;
 
+import tictactoe.Model.Field;
 import tictactoe.Model.FieldState;
 
 public class View {
@@ -22,6 +23,19 @@ public class View {
 		}
 	}
 	
-	
+	public void drawBoard(Field[][] board) {
+		System.out.print(" ");
+		System.out.print(" ");
+		System.out.print(" ");
+		System.out.print("\n");
+		System.out.print(" ");
+		System.out.print(" ");
+		System.out.print(" ");
+		System.out.print("\n");
+		System.out.print(" ");
+		System.out.print(" ");
+		System.out.print(" ");
+		System.out.print("\n");
+	}
 	
 }
