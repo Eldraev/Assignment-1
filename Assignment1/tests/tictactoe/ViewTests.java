@@ -43,6 +43,13 @@ public class ViewTests {
 	}
 	
 	@Test
+	public void shouldAskforRow() {
+		View v = new View();
+		v.askForRow();
+		verify(mockStream).print("Enter Row: ");
+	}
+	
+	@Test
 	public void shouldPrintFieldState() {
 		testFieldStateOutput(FieldState.Circle, "O");
 		testFieldStateOutput(FieldState.Cross, "X");
