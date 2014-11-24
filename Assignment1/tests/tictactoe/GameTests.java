@@ -206,6 +206,23 @@ public class GameTests {
 		 assertFalse(g.checkForWin());
 	 }
 	 
+	 @Test
+	 public void shouldAlsoNotFindWin() {
+		 Game g = new Game(new View());
+		 g.setField(1, 1, FieldState.Circle);
+		 g.setField(2, 1, FieldState.Cross);
+		 g.setField(3, 1, FieldState.Circle);
+		 assertFalse(g.checkForWin());
+	 }
+	 @Test
+	 public void shouldAlsoFindWin() {
+		 Game g = new Game(new View());
+		 g.setField(1, 1, FieldState.Cross);
+		 g.setField(2, 1, FieldState.Cross);
+		 g.setField(3, 1, FieldState.Cross);
+		 assertFalse(g.checkForWin());
+	 }
+	 
 	@After
 	public void resetOutput() {
 		System.setIn(originalInput);
