@@ -250,6 +250,12 @@ public class GameTests {
 		 g.setPlaying(false);
 	 }
 	 
+	 @Test
+	 public void shouldGetPlaying() {
+		 Game g = new Game(new View());
+		 assertTrue(g.isPlaying());
+	 }
+	 
 	@After
 	public void resetOutput() {
 		System.setIn(originalInput);
