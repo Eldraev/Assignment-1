@@ -68,6 +68,15 @@ public class GameTests {
 		inOrder.verify(mockInput).read(any(byte[].class),any(int.class),any(int.class));
 	}
 	
+	@Test
+	public void shouldReturnParsedNumber() {
+		int testInt = 2;
+		Game g = new Game(new View());
+		System.setIn(new ByteArrayInputStream( (testInt+"").getBytes()));
+		int i = g.getInput();
+		assertEquals(i,testInt);
+	}
+	
 	@After
 	public void resetOutput() {
 		System.setIn(originalInput);
