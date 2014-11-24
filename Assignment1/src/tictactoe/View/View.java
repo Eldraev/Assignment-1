@@ -31,6 +31,8 @@ public class View {
 					System.out.print("X"); break;
 				case Empty:
 					System.out.print(" "); break;
+				case Circle:
+					System.out.print("O"); break;
 				}
 			}
 			System.out.print("\n");
