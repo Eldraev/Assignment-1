@@ -32,17 +32,6 @@ public class GameTests {
 	}
 	
 	@Test
-	public void shouldInstantiateWithViewReference() {
-		new Game(new View());
-	}
-	
-	@Test
-	public void shouldPlayGame() {
-		Game g = new Game(new View());
-		g.play();
-	}
-	
-	@Test
 	public void shouldShowDialog() {
 		View mockView = mock(View.class);
 		Game g = new Game(mockView);
@@ -54,11 +43,6 @@ public class GameTests {
 		}
 	}
 	
-	@Test
-	public void shouldCallGetInput() {
-		Game g = new Game(new View());
-		g.getInput();
-	}
 	
 	@Test
 	public void shouldTakeInputFromStream() {
