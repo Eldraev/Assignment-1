@@ -22,9 +22,10 @@ public class Game {
 	
 	public int getInput() {
 		Scanner scan = new Scanner(System.in);
-		if(scan.hasNextLine())
-			scan.nextLine();
-		return 0;
+		int output = -1;
+		if(scan.hasNextInt())
+			output = scan.nextInt();
+		return output;
 	}
 	
 }
