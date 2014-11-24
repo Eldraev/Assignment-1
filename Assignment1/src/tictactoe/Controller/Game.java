@@ -7,10 +7,12 @@ import tictactoe.View.View;
 
 public class Game {
 
+	private Board board;
 	private View view;
 	
 	public Game(View v) {
 		view = v;
+		board = new Board();
 	}
 	
 	public void play() {
@@ -53,7 +55,7 @@ public class Game {
 	}
 	
 	public Board getBoard() {
-		return new Board();
+		return board;
 	}
 	
 }
