@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import tictactoe.Model.Board;
+import tictactoe.Model.Field;
 import tictactoe.Model.FieldState;
 
 public class BoardTests {
@@ -50,6 +51,12 @@ public class BoardTests {
 		b.getField(1, 1).setValue(FieldState.Circle);
 		b.clear();
 		checkBoardFor(b,FieldState.Empty);
+	}
+	
+	@Test
+	public void shouldGetBoardArray() {
+		Board b = new Board();
+		Field[][] f = b.getBoardArray();
 	}
 	
 	private void checkBoardFor(Board b, FieldState fs) {
