@@ -18,4 +18,8 @@ public class Game {
 		}
 	}
 	
+	public int getInput() {
+		return 0;
+	}
+	
 }
