@@ -3,6 +3,7 @@ package tictactoe.Controller;
 import java.util.Scanner;
 
 import tictactoe.Model.Board;
+import tictactoe.Model.FieldState;
 import tictactoe.View.View;
 
 public class Game {
@@ -47,7 +48,7 @@ public class Game {
 	}
 	
 	public boolean isFieldFree(int x, int y) {
-		return false;
+		return true;
 	}
 	
 	public void clearBoard() {
