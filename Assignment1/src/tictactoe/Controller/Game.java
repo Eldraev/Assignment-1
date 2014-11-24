@@ -32,6 +32,8 @@ public class Game {
 		} catch(IllegalArgumentException e) {
 			
 		}
+		doAITurn();
+		doAITurn();
 	}
 	
 	public int getInput() {
