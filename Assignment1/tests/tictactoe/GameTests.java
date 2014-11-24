@@ -155,6 +155,33 @@ public class GameTests {
 		 
 	 }
 	 
+	 @Test
+	 public void shouldLessEmptyFieldsAfterAITurn() {
+		 Game g = new Game(new View());
+		 g.doAITurn();
+		 Field[][] f = g.getBoard().getBoardArray();
+		 int previousEmpty = 9;
+		 int emptyCounter = 0;
+		 for(int y=0;y<3;y++) {
+			 for(int x=0;x<3;x++) {
+				 if(f[x][y].getValue() == FieldState.Empty)
+					 emptyCounter++;
+			 }
+		 }
+		 assertTrue(previousEmpty>emptyCounter);
+		 previousEmpty = emptyCounter;
+		 emptyCounter = 0;
+		 g.doAITurn();
+		 f = g.getBoard().getBoardArray();
+		 for(int y=0;y<3;y++) {
+			 for(int x=0;x<3;x++) {
+				 if(f[x][y].getValue() == FieldState.Empty)
+					 emptyCounter++;
+			 }
+		 }
+		 assertTrue(previousEmpty>emptyCounter);
+	 }
+	 
 	@After
 	public void resetOutput() {
 		System.setIn(originalInput);
