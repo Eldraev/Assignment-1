@@ -36,6 +36,13 @@ public class ViewTests {
 	}
 	
 	@Test
+	public void shouldAskforColumn() {
+		View v = new View();
+		v.askForColumn();
+		verify(mockStream).print("Enter Column: ");
+	}
+	
+	@Test
 	public void shouldPrintFieldState() {
 		testFieldStateOutput(FieldState.Circle, "O");
 		testFieldStateOutput(FieldState.Cross, "X");
