@@ -85,4 +85,8 @@ public class Game {
 		} while(true);
 	}
 	
+	public boolean checkForWin() {
+		return false;
+	}
+	
 }
