@@ -18,8 +18,6 @@ public class Game {
 	}
 	
 	public void play() {
-		for(int i = 0; i<9;i++) {
-			
 			view.drawBoard(board.getBoardArray());
 			view.notifyPlayer();
 			view.askForColumn();
@@ -34,7 +32,6 @@ public class Game {
 			} catch(IllegalArgumentException e) {
 				
 			}
-		}
 	}
 	
 	public int getInput() {
