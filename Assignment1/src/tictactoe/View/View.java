@@ -13,6 +13,10 @@ public class View {
 		System.out.print("Enter Column: ");
 	}
 	
+	public void askForRow() {
+		System.out.print("Enter Row: ");
+	}
+	
 	public void notifyPlayer() {
 		System.out.println("It's your turn: ");
 	}
