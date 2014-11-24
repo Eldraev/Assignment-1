@@ -9,6 +9,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import tictactoe.Model.Field;
 import tictactoe.Model.FieldState;
 import tictactoe.View.View;
 import static org.mockito.Mockito.*;
@@ -49,6 +50,19 @@ public class ViewTests {
 		} catch(IllegalArgumentException e) {
 			
 		}
+	}
+	
+	@Test
+	public void shouldPrintBoard() {
+		View v = new View();
+		Field[][] testBoard = new Field[3][3];
+		for(Field[] fa : testBoard) {
+			for(Field f : fa) {
+				f = new Field();
+			}
+		}
+		v.drawBoard(testBoard);
+		verify(mockStream).println(" | | \n-----\n | | \n-----\n | | ");
 	}
 	
 	@After
