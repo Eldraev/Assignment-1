@@ -18,7 +18,8 @@ public class Game {
 	
 	public void play() {
 		for(int i = 0; i<9;i++) {
-			view.drawBoard(new Board().getBoardArray());
+			
+			view.drawBoard(board.getBoardArray());
 			view.notifyPlayer();
 			view.askForColumn();
 			try {
