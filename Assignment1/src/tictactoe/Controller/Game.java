@@ -1,8 +1,10 @@
 package tictactoe.Controller;
 
+import tictactoe.View.View;
+
 public class Game {
 
-	public Game() {
+	public Game(View v) {
 		
 	}
 	
