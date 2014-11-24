@@ -25,6 +25,8 @@ public class Game {
 		int output = -1;
 		if(scan.hasNextInt())
 			output = scan.nextInt();
+		if(output < 0)
+			throw new IllegalArgumentException();
 		return output;
 	}
 	
