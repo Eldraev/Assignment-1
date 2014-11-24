@@ -59,6 +59,15 @@ public class BoardTests {
 		Field[][] f = b.getBoardArray();
 	}
 	
+	@Test
+	public void shouldGetBoardArrayWithOneCross() {
+		Board b = new Board();
+		b.clear();
+		b.getField(1, 1).setValue(FieldState.Cross);
+		Field[][] f = b.getBoardArray();
+		assertEquals(f[1][1].getValue(),FieldState.Cross);
+	}
+	
 	private void checkBoardFor(Board b, FieldState fs) {
 		for(int x=0;x<3;x++) {
 			for(int y=0;y<3;y++) 
