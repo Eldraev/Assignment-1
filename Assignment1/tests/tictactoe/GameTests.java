@@ -5,12 +5,13 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import tictactoe.Controller.Game;
+import tictactoe.View.View;
 
 public class GameTests {
 	
 	@Test
-	public void shouldCreateAInstance() {
-		new Game();
+	public void shouldInstantiateWithViewReference() {
+		new Game(new View());
 	}
 	
 	@Test
