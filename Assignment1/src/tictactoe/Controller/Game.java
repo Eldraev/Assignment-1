@@ -52,6 +52,10 @@ public class Game {
 		return board.getField(x, y).getValue() == FieldState.Empty;
 	}
 	
+	public void setPlaying(boolean b) {
+		
+	}
+	
 	public void clearBoard() {
 		board.clear();
 	}
