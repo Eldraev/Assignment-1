@@ -113,6 +113,12 @@ public class GameTests {
 	}
 	
 	@Test
+	public void shouldGiveFreeField() {
+		Game g = new Game(new View());
+		assertTrue(g.isFieldFree(1,1));	
+	}
+	
+	@Test
 	public void shouldStartNewBoard() {
 		Game g = new Game(new View());
 		g.getBoard().getField(1, 1).setValue(FieldState.Circle);
@@ -121,7 +127,7 @@ public class GameTests {
 	}
 	
 	@Test
-	public void shouldGetBoardThatNotNull() {
+	public void shouldGetBoardThatIsNotNull() {
 		Game g = new Game(new View());
 		assertTrue(g.getBoard()!=null);
 	}
