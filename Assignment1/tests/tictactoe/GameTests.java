@@ -44,6 +44,20 @@ public class GameTests {
 	}
 	
 	@Test
+	public void shouldAskForInputAfterDialog() {
+		View mockView = mock(View.class);
+		Game g = new Game(mockView);
+		g.play();
+		InOrder inOrder = inOrder(mockView, mockInput);
+		inOrder.verify(mockView).drawBoard(any(Field[][].class));
+		inOrder.verify(mockView).notifyPlayer();
+		inOrder.verify(mockView).askForColumn();
+		inOrder.verify(mockInput).read(any(byte[].class),any(int.class),any(int.class));
+		inOrder.verify(mockView).askForRow();
+		inOrder.verify(mockInput).read(any(byte[].class),any(int.class),any(int.class));
+	}
+	
+	@Test
 	public void shouldReturnParsedNumber() {
 		int testInt = 2;
 		Game g = new Game(new View());
