@@ -220,7 +220,7 @@ public class GameTests {
 		 g.setField(1, 1, FieldState.Cross);
 		 g.setField(2, 1, FieldState.Cross);
 		 g.setField(3, 1, FieldState.Cross);
-		 assertFalse(g.checkForWin());
+		 assertTrue(g.checkForWin());
 	 }
 	 
 	@After
