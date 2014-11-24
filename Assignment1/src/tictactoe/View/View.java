@@ -35,7 +35,10 @@ public class View {
 	}
 	
 	public void printWinner(boolean playerWon) {
-		System.out.println("You won the game. Press Enter to play again.");
+		if(playerWon)
+			System.out.println("You won the game. Press Enter to play again.");
+		else
+			System.out.println("You lost the game. Press Enter to play again.");
 	}
 	
 }
