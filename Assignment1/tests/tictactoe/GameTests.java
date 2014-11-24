@@ -43,7 +43,6 @@ public class GameTests {
 		}
 	}
 	
-	
 	@Test
 	public void shouldTakeInputFromStream() {
 		Game g = new Game(new View());
@@ -59,6 +58,19 @@ public class GameTests {
 		System.setIn(new ByteArrayInputStream( (testInt+"").getBytes()));
 		int i = g.getInput();
 		assertEquals(i,testInt);
+	}
+	
+	@Test
+	public void shouldThrowOnNegative() {
+		int testInt = -2;
+		Game g = new Game(new View());
+		System.setIn(new ByteArrayInputStream( (testInt+"").getBytes()));
+		try{
+			g.getInput();
+			fail();
+		} catch(IllegalArgumentException e) {
+			
+		} 
 	}
 	
 	@After
