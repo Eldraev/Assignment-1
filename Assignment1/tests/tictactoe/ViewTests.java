@@ -91,6 +91,25 @@ public class ViewTests {
 		inOrder.verify(mockStream, times(1)).print("\n");
 	}
 	
+	@Test
+	public void shouldDrawCircledBoard() {
+		View v = new View();
+		Field[][] testBoard = new Field[3][3];
+		for(int y = 0; y<testBoard.length; y++) {
+			for(int x = 0; x<testBoard[y].length; x++) {
+				testBoard[y][x] = new Field(FieldState.Circle);
+			}
+		}
+		v.drawBoard(testBoard);
+		InOrder inOrder = inOrder(mockStream);
+		inOrder.verify(mockStream, times(3)).print("O");
+		inOrder.verify(mockStream, times(1)).print("\n");
+		inOrder.verify(mockStream, times(3)).print("O");
+		inOrder.verify(mockStream, times(1)).print("\n");
+		inOrder.verify(mockStream, times(3)).print("O");
+		inOrder.verify(mockStream, times(1)).print("\n");
+	}
+	
 	@After
 	public void resetOutput() {
 		System.setOut(originalOutput);
