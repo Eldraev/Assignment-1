@@ -3,15 +3,31 @@ package tictactoe;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
+import java.io.InputStream;
+import java.io.PrintStream;
+
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InOrder;
 
 import tictactoe.Controller.Game;
 import tictactoe.Model.Board;
 import tictactoe.Model.Field;
+import tictactoe.Model.FieldState;
 import tictactoe.View.View;
 
 public class GameTests {
+	
+	private InputStream originalInput;
+	private InputStream mockInput;
+	
+	@Before
+	public void mockInput() {
+		originalInput = System.in;
+		mockInput = mock(InputStream.class);
+		System.setIn(mockInput);
+	}
 	
 	@Test
 	public void shouldInstantiateWithViewReference() {
@@ -34,6 +50,17 @@ public class GameTests {
 			inOrder.verify(mockView).drawBoard(any(Field[][].class));
 			inOrder.verify(mockView).notifyPlayer();
 		}
+	}
+	
+	@Test
+	public void shouldCallGetInput() {
+		Game g = new Game(new View());
+		g.getInput();
+	}
+	
+	@After
+	public void resetOutput() {
+		System.setIn(originalInput);
 	}
 	
 }
