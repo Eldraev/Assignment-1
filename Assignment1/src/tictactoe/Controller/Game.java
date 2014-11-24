@@ -44,4 +44,8 @@ public class Game {
 		return output;
 	}
 	
+	public boolean isFieldFree(int x, int y) {
+		return false;
+	}
+	
 }
