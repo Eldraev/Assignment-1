@@ -256,6 +256,13 @@ public class GameTests {
 		 assertTrue(g.isPlaying());
 	 }
 	 
+	 @Test
+	 public void shouldGetNotPlaying() {
+		 Game g = new Game(new View());
+		 g.setPlaying(false);
+		 assertFalse(g.isPlaying());
+	 }
+	 
 	@After
 	public void resetOutput() {
 		System.setIn(originalInput);
