@@ -1,5 +1,6 @@
 package tictactoe.Controller;
 
+import java.util.Random;
 import java.util.Scanner;
 
 import tictactoe.Model.Board;
@@ -67,7 +68,21 @@ public class Game {
 	}
 	
 	public void doAITurn() {
-		
+		Random rand = new Random();
+		int randX;
+		int randY;
+		do{
+			randX = rand.nextInt(2);
+			randX++;
+			randY = rand.nextInt(2);
+			randY++;
+			try {
+				setField(randX,randY,FieldState.Cross);
+				break;
+			} catch(IllegalArgumentException e) {
+				
+			}
+		} while(true);
 	}
 	
 }
