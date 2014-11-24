@@ -52,31 +52,7 @@ public class ViewTests {
 		}
 	}
 	
-	@Test
-	public void shouldPrintBoard() {
-		View v = new View();
-		Field[][] testBoard = new Field[3][3];
-		for(Field[] fa : testBoard) {
-			for(Field f : fa) {
-				f = new Field();
-			}
-		}
-		v.drawBoard(testBoard);
-		verify(mockStream).println(" | | \n-----\n | | \n-----\n | | ");
-	}
-	
-	@Test
-	public void shouldPrintBoardWithCrosses() {
-		View v = new View();
-		Field[][] testBoard = new Field[3][3];
-		for(Field[] fa : testBoard) {
-			for(Field f : fa) {
-				f = new Field(FieldState.Cross);
-			}
-		}
-		v.drawBoard(testBoard);
-		verify(mockStream).println("X|X|X\n-----\nX|X|X\n-----\nX|X|X");
-	}
+
 	
 	@After
 	public void resetOutput() {

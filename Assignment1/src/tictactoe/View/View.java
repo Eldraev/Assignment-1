@@ -23,8 +23,6 @@ public class View {
 		}
 	}
 	
-	public void drawBoard(Field[][] board) {
-		System.out.println(" | | \n-----\n | | \n-----\n | | ");
-	}
+
 	
 }
