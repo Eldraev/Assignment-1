@@ -56,6 +56,10 @@ public class Game {
 		
 	}
 	
+	public boolean isPlaying() {
+		return true;
+	}
+	
 	public void clearBoard() {
 		board.clear();
 	}
