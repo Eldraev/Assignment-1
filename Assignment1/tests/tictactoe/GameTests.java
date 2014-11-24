@@ -124,6 +124,14 @@ public class GameTests {
 		assertTrue(g.getBoard()!=null);
 	}
 	
+	 @Test
+	 public void shouldGetBoardThatKeepsValues() {
+		 Game g = new Game(new View());
+		 g.getBoard().clear();
+		 g.getBoard().getField(1, 1).setValue(FieldState.Circle);
+		 assertEquals(g.getBoard().getField(1, 1).getValue(),FieldState.Circle);
+	 }
+	
 	@After
 	public void resetOutput() {
 		System.setIn(originalInput);
