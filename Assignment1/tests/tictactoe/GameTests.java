@@ -16,7 +16,7 @@ public class GameTests {
 	
 	@Test
 	public void shouldPlayGame() {
-		Game g = new Game();
+		Game g = new Game(new View());
 		g.play();
 	}
 	
