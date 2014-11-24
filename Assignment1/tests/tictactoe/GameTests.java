@@ -182,6 +182,12 @@ public class GameTests {
 		 assertTrue(previousEmpty>emptyCounter);
 	 }
 	 
+	 @Test
+	 public void shouldCallCheckForWin() {
+		 Game g = new Game(new View());
+		 g.checkForWin();
+	 }
+	 
 	@After
 	public void resetOutput() {
 		System.setIn(originalInput);
