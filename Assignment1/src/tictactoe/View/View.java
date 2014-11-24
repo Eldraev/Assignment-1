@@ -9,6 +9,10 @@ public class View {
 		
 	}
 	
+	public void askForColumn() {
+		System.out.print("Enter Column: ");
+	}
+	
 	public void notifyPlayer() {
 		System.out.println("It's your turn: ");
 	}
