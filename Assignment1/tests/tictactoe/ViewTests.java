@@ -121,6 +121,13 @@ public class ViewTests {
 		}
 	}
 	
+	@Test
+	public void shouldPrintResult() {
+		View v = new View();
+		v.printWinner(true);
+		verify(mockStream).println("You won the game. Press Enter to play again.");
+	}
+	
 	@After
 	public void resetOutput() {
 		System.setOut(originalOutput);
