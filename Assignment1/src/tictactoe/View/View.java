@@ -34,4 +34,8 @@ public class View {
 		}
 	}
 	
+	public void printWinner(boolean playerWon) {
+		System.out.println("You won the game. Press Enter to play again.");
+	}
+	
 }
