@@ -128,6 +128,13 @@ public class ViewTests {
 		verify(mockStream).println("You won the game. Press Enter to play again.");
 	}
 	
+	@Test
+	public void shouldPrintResultComputerWon() {
+		View v = new View();
+		v.printWinner(false);
+		verify(mockStream).println("You lost the game. Press Enter to play again.");
+	}
+	
 	@After
 	public void resetOutput() {
 		System.setOut(originalOutput);
