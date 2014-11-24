@@ -23,4 +23,8 @@ public class Board {
 				fields[x][y] = new Field();
 		}
 	}
+	
+	public Field[][] getBoardArray() {
+		return new Field[3][3];
+	}
 }
