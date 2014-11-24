@@ -245,12 +245,6 @@ public class GameTests {
 	 }	
 	 
 	 @Test
-	 public void shouldSetPlaying() {
-		 Game g = new Game(new View());
-		 g.setPlaying(false);
-	 }
-	 
-	 @Test
 	 public void shouldGetPlaying() {
 		 Game g = new Game(new View());
 		 assertTrue(g.isPlaying());
