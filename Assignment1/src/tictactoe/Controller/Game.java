@@ -18,7 +18,17 @@ public class Game {
 			view.drawBoard(new Board().getBoardArray());
 			view.notifyPlayer();
 			view.askForColumn();
+			try {
+				getInput();
+			} catch(IllegalArgumentException e) {
+				
+			}
 			view.askForRow();
+			try {
+				getInput();
+			} catch(IllegalArgumentException e) {
+				
+			}
 		}
 	}
 	
