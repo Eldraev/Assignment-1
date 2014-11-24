@@ -110,6 +110,17 @@ public class ViewTests {
 		inOrder.verify(mockStream, times(1)).print("\n");
 	}
 	
+	@Test
+	public void shouldThrowOnNullBoard() {
+		View v = new View();
+		try {
+			v.drawBoard(null);
+			fail();
+		} catch(IllegalArgumentException e) {
+			
+		}
+	}
+	
 	@After
 	public void resetOutput() {
 		System.setOut(originalOutput);
