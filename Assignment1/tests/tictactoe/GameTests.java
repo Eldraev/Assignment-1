@@ -38,7 +38,7 @@ public class GameTests {
 		Game g = new Game(mockView);
 		g.play();
 		InOrder inOrder = inOrder(mockView, mockInput);
-		inOrder.verify(mockView).drawBoard(any(Field[][].class));
+		inOrder.verify(mockView).drawBoard(g.getBoard().getBoardArray());
 		inOrder.verify(mockView).notifyPlayer();
 		inOrder.verify(mockView).askForColumn();
 		inOrder.verify(mockInput).read(any(byte[].class),any(int.class),any(int.class));
