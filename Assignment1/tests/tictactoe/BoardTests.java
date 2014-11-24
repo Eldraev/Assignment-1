@@ -54,12 +54,6 @@ public class BoardTests {
 	}
 	
 	@Test
-	public void shouldGetBoardArray() {
-		Board b = new Board();
-		Field[][] f = b.getBoardArray();
-	}
-	
-	@Test
 	public void shouldGetBoardArrayWithOneCross() {
 		Board b = new Board();
 		b.clear();
