@@ -136,6 +136,18 @@ public class GameTests {
 		 assertEquals(g.getBoard().getField(1, 1).getValue(),FieldState.Circle);
 	 }
 	 
+	 @Test
+	 public void shouldThrowOnFieldIsSet() {
+		 Game g = new Game(new View());
+		 g.setField(1, 1, FieldState.Circle);
+		 try{
+			 g.setField(1, 1, FieldState.Cross);
+			 fail();
+		 } catch(IllegalArgumentException e) {
+			 
+		 }
+	 }
+	 
 	@After
 	public void resetOutput() {
 		System.setIn(originalInput);
