@@ -188,6 +188,15 @@ public class GameTests {
 		 g.checkForWin();
 	 }
 	 
+	 @Test
+	 public void shouldFindWin() {
+		 Game g = new Game(new View());
+		 g.setField(1, 1, FieldState.Circle);
+		 g.setField(1, 2, FieldState.Circle);
+		 g.setField(1, 3, FieldState.Circle);
+		 assertTrue(g.checkForWin());
+	 }
+	 
 	@After
 	public void resetOutput() {
 		System.setIn(originalInput);
