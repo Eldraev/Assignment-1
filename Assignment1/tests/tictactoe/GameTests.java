@@ -44,14 +44,6 @@ public class GameTests {
 	}
 	
 	@Test
-	public void shouldTakeInputFromStream() {
-		Game g = new Game(new View());
-		g.getInput();
-		InOrder inOrder = inOrder(mockInput);
-		inOrder.verify(mockInput).read(any(byte[].class),any(int.class),any(int.class));
-	}
-	
-	@Test
 	public void shouldReturnParsedNumber() {
 		int testInt = 2;
 		Game g = new Game(new View());
