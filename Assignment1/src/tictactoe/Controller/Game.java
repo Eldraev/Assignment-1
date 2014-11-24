@@ -48,7 +48,7 @@ public class Game {
 	}
 	
 	public boolean isFieldFree(int x, int y) {
-		return true;
+		return board.getField(x, y).getValue() == FieldState.Empty;
 	}
 	
 	public void clearBoard() {
