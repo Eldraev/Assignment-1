@@ -7,6 +7,7 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintStream;
+import java.util.Scanner;
 
 import org.junit.After;
 import org.junit.Before;
@@ -103,6 +104,13 @@ public class GameTests {
 		} catch(IllegalArgumentException e) {
 			
 		} 
+	}
+	
+	@Test
+	public void shouldCheckIfFieldIsFree() {
+		Game g = new Game(new View());
+		g.isFieldFree(1,1);
+		
 	}
 	
 	@After
