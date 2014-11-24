@@ -37,10 +37,10 @@ public class GameTests {
 		Game g = new Game(mockView);
 		g.play();
 		InOrder inOrder = inOrder(mockView);
-			inOrder.verify(mockView).drawBoard(any(Field[][].class));
-			inOrder.verify(mockView).notifyPlayer();
-			inOrder.verify(mockView).askForColumn();
-			inOrder.verify(mockView).askForRow();
+		inOrder.verify(mockView).drawBoard(any(Field[][].class));
+		inOrder.verify(mockView).notifyPlayer();
+		inOrder.verify(mockView).askForColumn();
+		inOrder.verify(mockView).askForRow();
 	}
 	
 	@Test
