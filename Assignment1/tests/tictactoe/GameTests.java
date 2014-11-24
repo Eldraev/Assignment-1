@@ -148,6 +148,13 @@ public class GameTests {
 		 
 	 }
 	 
+	 @Test
+	 public void shouldSetAndGetField11() {
+		 Game g = new Game(new View());
+		 g.setField(1, 1, FieldState.Circle);
+		 assertEquals(g.getBoard().getField(1, 1).getValue(),FieldState.Circle);
+	 }
+	 
 	@After
 	public void resetOutput() {
 		System.setIn(originalInput);
