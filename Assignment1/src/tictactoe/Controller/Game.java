@@ -18,20 +18,20 @@ public class Game {
 	}
 	
 	public void play() {
-			view.drawBoard(board.getBoardArray());
-			view.notifyPlayer();
-			view.askForColumn();
-			try {
-				getInput();
-			} catch(IllegalArgumentException e) {
-				
-			}
-			view.askForRow();
-			try {
-				getInput();
-			} catch(IllegalArgumentException e) {
-				
-			}
+		view.drawBoard(board.getBoardArray());
+		view.notifyPlayer();
+		view.askForColumn();
+		try {
+			getInput();
+		} catch(IllegalArgumentException e) {
+			
+		}
+		view.askForRow();
+		try {
+			getInput();
+		} catch(IllegalArgumentException e) {
+			
+		}
 	}
 	
 	public int getInput() {
@@ -71,9 +71,9 @@ public class Game {
 		int randX;
 		int randY;
 		do{
-			randX = rand.nextInt(2);
+			randX = rand.nextInt(3);
 			randX++;
-			randY = rand.nextInt(2);
+			randY = rand.nextInt(3);
 			randY++;
 			try {
 				setField(randX,randY,FieldState.Cross);
