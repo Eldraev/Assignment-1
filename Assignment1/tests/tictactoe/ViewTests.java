@@ -53,6 +53,26 @@ public class ViewTests {
 		}
 	}
 	
+	@Test
+	public void shouldDrawEmptyBoard() {
+		View v = new View();
+		Field[][] testBoard = new Field[3][3];
+		for(int y = 0; y<testBoard.length; y++) {
+			for(int x = 0; x<testBoard[y].length; x++) {
+				testBoard[y][x] = new Field();
+			}
+		}
+		v.drawBoard(testBoard);
+		InOrder inOrder = inOrder(mockStream);
+		inOrder.verify(mockStream, times(3)).print("X");
+		inOrder.verify(mockStream, times(1)).print("\n");
+		inOrder.verify(mockStream, times(3)).print("X");
+		inOrder.verify(mockStream, times(1)).print("\n");
+		inOrder.verify(mockStream, times(3)).print("X");
+		inOrder.verify(mockStream, times(1)).print("\n");
+		
+	}
+	
 	@After
 	public void resetOutput() {
 		System.setOut(originalOutput);
