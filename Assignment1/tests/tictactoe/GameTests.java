@@ -128,13 +128,6 @@ public class GameTests {
 		 g.getBoard().getField(1, 1).setValue(FieldState.Circle);
 		 assertEquals(g.getBoard().getField(1, 1).getValue(),FieldState.Circle);
 	 }
-	
-	 @Test
-	 public void shouldSetField() {
-		 Game g = new Game(new View());
-		 g.setField(1,2,FieldState.Cross);
-		 
-	 }
 	 
 	 @Test
 	 public void shouldSetAndGetField11() {
