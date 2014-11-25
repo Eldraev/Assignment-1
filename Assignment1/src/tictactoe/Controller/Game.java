@@ -152,4 +152,8 @@ public class Game {
 		return false;
 	}
 	
+	public boolean isTie() {
+		return false;
+	}
+	
 }
