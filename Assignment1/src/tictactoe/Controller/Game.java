@@ -25,19 +25,22 @@ public class Game {
 		view.drawBoard(board.getBoardArray());
 		view.notifyPlayer();
 		view.askForColumn();
+		int inCol = -1;
+		int inRow = -1;
 		try {
-			getInput();
+			inCol = getInput();
 		} catch(IllegalArgumentException e) {
 			view.printError();
 			return false;
 		}
 		view.askForRow();
 		try {
-			getInput();
+			inRow = getInput();
 		} catch(IllegalArgumentException e) {
 			view.printError();
 			return false;
 		}
+		setField(inRow,inCol,FieldState.Circle);
 		doAITurn();
 		return true;
 	}
