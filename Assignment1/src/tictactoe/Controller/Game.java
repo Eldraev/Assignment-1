@@ -48,6 +48,7 @@ public class Game {
 		}
 		if(checkForWin()) {
 			view.printWinner(true);
+			view.drawBoard(board.getBoardArray());
 			clearBoard();
 			return true;
 		}
