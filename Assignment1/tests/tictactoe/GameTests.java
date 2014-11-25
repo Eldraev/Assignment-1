@@ -118,6 +118,8 @@ public class GameTests {
 		verify(mockView).printWinner(true);
 	}
 	
+	
+	
 	@Test
 	public void shouldReturnParsedNumber() {
 		int testInt = 2;
@@ -296,6 +298,15 @@ public class GameTests {
 		 g.setField(1, 1, FieldState.Cross);
 		 g.setField(2, 1, FieldState.Cross);
 		 g.setField(3, 1, FieldState.Cross);
+		 assertTrue(g.checkForWin());
+	 }
+	 
+	 @Test
+	 public void shouldFindWinOndiagonal() {
+		 Game g = new Game(new View());
+		 g.setField(1, 1, FieldState.Cross);
+		 g.setField(2, 2, FieldState.Cross);
+		 g.setField(3, 3, FieldState.Cross);
 		 assertTrue(g.checkForWin());
 	 }
 	 
