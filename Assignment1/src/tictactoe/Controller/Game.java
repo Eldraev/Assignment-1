@@ -52,6 +52,11 @@ public class Game {
 			clearBoard();
 			return true;
 		}
+		if(isTie()) {
+			view.printTie();
+			clearBoard();
+			return true;
+		}
 		doAITurn();
 		if(checkForWin()) {
 			view.printWinner(false);
