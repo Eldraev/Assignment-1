@@ -139,9 +139,9 @@ public class ViewTests {
 	public void shouldPrintResult() {
 		View v = new View();
 		v.printWinner(true);
-		verify(mockStream).println("You won the game. Press Enter to play again.");
+		verify(mockStream).println("You won the game. A new game has been started.");
 		v.printWinner(false);
-		verify(mockStream).println("You lost the game. Press Enter to play again.");
+		verify(mockStream).println("You lost the game. A new game has been started.");
 	}
 	
 	@Test
