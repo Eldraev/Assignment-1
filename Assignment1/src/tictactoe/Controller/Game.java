@@ -12,6 +12,7 @@ public class Game {
 	private Board board;
 	private View view;
 	private boolean playing;
+	private Scanner scan;
 	
 	public Game(View v) {
 		view = v;
@@ -54,7 +55,11 @@ public class Game {
 	}
 	
 	public Scanner getScanner() {
-		return null;
+		return scan;
+	}
+	
+	public void setScanner(Scanner s) {
+		scan = s;
 	}
 	
 	public boolean isFieldFree(int x, int y) {
