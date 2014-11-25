@@ -48,6 +48,8 @@ public class Game {
 		}
 		if(checkForWin()) {
 			view.printWinner(true);
+			clearBoard();
+			return true;
 		}
 		doAITurn();
 		if(checkForWin()) {
