@@ -50,6 +50,12 @@ public class GameTests {
 		}
 	
 	@Test
+	public void shouldGetScanner() { 
+		Game g = new Game(new View());
+		g.getScanner();
+	}
+	
+	@Test
 	public void shouldAskForInputAfterDialog() {
 		View mockView = mock(View.class);
 		Game g = new Game(mockView);
