@@ -76,6 +76,13 @@ public class GameTests {
 	}
 	
 	@Test
+	public void shouldCallIsTie() {
+		View mockView = mock(View.class);
+		Game g = new Game(mockView);
+		g.isTie();
+	}
+	
+	@Test
 	public void shouldSetACircleAt11ByPlaying() {
 		System.setIn(new ByteArrayInputStream("1 1".getBytes()));
 		Game g = new Game(new View());
