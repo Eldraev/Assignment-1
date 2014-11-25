@@ -73,8 +73,6 @@ public class GameTests {
 		inOrder.verify(mockView).notifyPlayer();
 		inOrder.verify(mockView).askForColumn();
 		inOrder.verify(mockInput).read(any(byte[].class),any(int.class),any(int.class));
-//		inOrder.verify(mockView).askForRow();
-//		inOrder.verify(mockInput).read(any(byte[].class),any(int.class),any(int.class));
 	}
 	
 	@Test
@@ -368,28 +366,6 @@ public class GameTests {
 		 g.setField(3, 3, FieldState.Cross);
 		 assertTrue(g.checkForWin());
 	 }
-	 
-	 
-	 //not true anymore since it might end before it updates
-//	 @Test
-//	 public void shouldUpdateFieldInPlay() {
-//		 Game g = new Game(new View());
-//		 Field[][] board = g.getBoard().getBoardArray();
-//		 Field[][] a = new Field[3][3];
-//		 for(int x=0;x<3;x++) {
-//			 for(int y=0;y<3;y++)
-//				 a[x][y] = new Field(board[x][y].getValue());
-//		 }
-//		 g.play();
-//		 Field[][] b = g.getBoard().getBoardArray();
-//		 int inequalityCounter = 0;
-//		 for(int x=0;x<3;x++) {
-//			 for(int y=0;y<3;y++)
-//				 if(a[x][y].getValue() != b[x][y].getValue())
-//					 inequalityCounter++;
-//		 }
-//		 assertEquals(inequalityCounter,2);
-//	 }	
 	 
 	 @Test
 	 public void shouldGetPlaying() {
