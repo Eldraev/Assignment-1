@@ -24,7 +24,7 @@ public class MainTests {
 	public void shouldPlayGame() {
 		Game mockGame = mock(Game.class);
 		new TicTacToeMain().launch(mockGame);
-		verify(mockGame).play();
+		verify(mockGame).isPlaying();
 	}
 	
 }
