@@ -46,8 +46,13 @@ public class Game {
 			view.printError();
 			return false;
 		}
+		if(checkForWin()) {
+			view.printWinner(true);
+		}
 		doAITurn();
-		view.printWinner(true);
+		if(checkForWin()) {
+			view.printWinner(false);
+		}
 		return true;
 	}
 	
@@ -128,6 +133,17 @@ public class Game {
 			&& board.getField(0, i).getValue() != FieldState.Empty)
 		return true;
 		}
+		
+		if(board.getField(0, 0).getValue() == board.getField(1, 1).getValue() 
+		&& board.getField(1, 1).getValue() == board.getField(2, 2).getValue()
+		&& board.getField(1, 1).getValue() != FieldState.Empty)
+			return true;
+		
+		if(board.getField(0, 2).getValue() == board.getField(1, 1).getValue() 
+		&& board.getField(1, 1).getValue() == board.getField(2, 0).getValue()
+		&& board.getField(1, 1).getValue() != FieldState.Empty)
+			return true;
+		
 		return false;
 	}
 	
