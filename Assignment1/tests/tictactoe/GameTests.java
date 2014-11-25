@@ -42,6 +42,14 @@ public class GameTests {
 	}
 	
 	@Test
+	public void shouldWriteMessageOnReturnFalse() {
+		View mockView = mock(View.class);
+		Game g = new Game(mockView);
+		g.play();
+		verify(mockView).printError();
+		}
+	
+	@Test
 	public void shouldAskForInputAfterDialog() {
 		View mockView = mock(View.class);
 		Game g = new Game(mockView);
