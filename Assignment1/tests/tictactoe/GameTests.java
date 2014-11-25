@@ -180,6 +180,22 @@ public class GameTests {
 	 }
 	 
 	 @Test
+	 public void shouldOnlyDoOneAITurn() {
+		 System.setIn(new ByteArrayInputStream("1 1".getBytes()));
+		 Game g = new Game(new View());
+		 g.play();
+		 Field[][] f = g.getBoard().getBoardArray();
+		 int crossCounter = 0;
+		 for(int y=0;y<3;y++) {
+			 for(int x=0;x<3;x++) {
+				 if(f[x][y].getValue() == FieldState.Cross)
+					 crossCounter++;
+			 }
+		 }
+		 assertTrue(crossCounter==1);
+	 }
+	 
+	 @Test
 	 public void shouldLessEmptyFieldsAfterAITurn() {
 		 Game g = new Game(new View());
 		 g.doAITurn();
