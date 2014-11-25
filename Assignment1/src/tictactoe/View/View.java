@@ -42,6 +42,10 @@ public class View {
 		}
 	}
 	
+	public void printTie() {
+		System.out.println("The match is a tie. Press Enter to play again.");
+	}
+	
 	public void printError() {
 		System.out.println("Wrong Input please try again.");
 	}
