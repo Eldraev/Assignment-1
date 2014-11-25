@@ -50,12 +50,6 @@ public class GameTests {
 		}
 	
 	@Test
-	public void shouldGetScanner() { 
-		Game g = new Game(new View());
-		g.getScanner();
-	}
-	
-	@Test
 	public void shouldGetScannerAfterSettingIt() {
 		Game g = new Game(new View());
 		Scanner tryOut = new Scanner(System.in);
