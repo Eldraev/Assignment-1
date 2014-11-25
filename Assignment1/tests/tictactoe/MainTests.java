@@ -24,4 +24,11 @@ public class MainTests {
 		new TicTacToeMain().launch(new Game(new View()));
 	}
 	
+	@Test
+	public void shouldPlayGame() {
+		Game mockGame = mock(Game.class);
+		new TicTacToeMain().launch(mockGame);
+		verify(mockGame).play();
+	}
+	
 }
