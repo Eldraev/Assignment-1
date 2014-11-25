@@ -44,6 +44,7 @@ public class Game {
 		setField(inRow,inCol,FieldState.Circle);
 		} catch (IllegalArgumentException e) {
 			view.printError();
+			return false;
 		}
 		doAITurn();
 		return true;
