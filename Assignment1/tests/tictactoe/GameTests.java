@@ -154,6 +154,19 @@ public class GameTests {
 	}
 	
 	@Test
+	public void shouldRedrawFieldAfterAIWin() {
+		System.setIn(new ByteArrayInputStream("1 1".getBytes()));
+		View mockView = mock(View.class);
+		Game g = new Game(mockView);
+		g.setField(1, 2, FieldState.Cross);
+		g.setField(1, 3, FieldState.Cross);
+		g.setField(2, 2, FieldState.Cross);
+		g.setField(2, 3, FieldState.Cross);
+		g.play();
+		verify(mockView, times(2)).drawBoard(any(Field[][].class));
+	}
+	
+	@Test
 	public void shouldLetAIWin() {
 		System.setIn(new ByteArrayInputStream("1 1".getBytes()));
 		View mockView = mock(View.class);
