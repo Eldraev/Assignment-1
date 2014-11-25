@@ -407,6 +407,21 @@ public class GameTests {
 	 }
 	 
 	 @Test
+	 public void shouldGiveNoTie() {
+		 Game g = new Game(new View());
+		 g.setField(1, 1, FieldState.Cross);
+		 g.setField(2, 1, FieldState.Cross);
+		 g.setField(3, 1, FieldState.Cross);
+		 g.setField(1, 2, FieldState.Cross);
+		 g.setField(2, 2, FieldState.Cross);
+		 g.setField(3, 2, FieldState.Cross);
+		 g.setField(1, 3, FieldState.Cross);
+		 g.setField(2, 3, FieldState.Cross);
+		 g.setField(3, 3, FieldState.Cross);
+		 assertFalse(g.isTie());
+	 }
+	 
+	 @Test
 	 public void shouldFindWinOnDiagonal() {
 		 Game g = new Game(new View());
 		 g.setField(1, 1, FieldState.Cross);
