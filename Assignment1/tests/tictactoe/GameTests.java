@@ -97,6 +97,17 @@ public class GameTests {
 	}
 	
 	@Test
+	public void shouldNotDoTurnOnSetFieldException() {
+		System.setIn(new ByteArrayInputStream("1 1 1 1".getBytes()));
+		View mockView = mock(View.class);
+		Game g = new Game(mockView);
+		g.play();
+		g.play();
+		assertTrue(getNumberStatesInField(g.getBoard().getBoardArray(), FieldState.Cross)==1);
+		
+	}
+	
+	@Test
 	public void shouldReturnParsedNumber() {
 		int testInt = 2;
 		System.setIn(new ByteArrayInputStream( (testInt+"").getBytes()));
@@ -310,6 +321,17 @@ public class GameTests {
 		 Game g = new Game(new View());
 		 g.setPlaying(false);
 		 assertFalse(g.isPlaying());
+	 }
+	 
+	 private int getNumberStatesInField(Field[][] f, FieldState fs) {
+		 int output = 0;
+		 for(int y=0;y<3;y++) {
+			 for(int x=0;x<3;x++) {
+				 if(f[x][y].getValue() == fs)
+					 output++;
+			 }
+		 }
+		 return output;
 	 }
 	 
 	 @After
