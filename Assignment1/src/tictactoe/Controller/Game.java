@@ -18,6 +18,7 @@ public class Game {
 		view = v;
 		board = new Board();
 		playing = true;
+		scan = new Scanner(System.in);
 	}
 	
 	public boolean play() {
