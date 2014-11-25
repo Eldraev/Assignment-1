@@ -54,6 +54,7 @@ public class Game {
 		doAITurn();
 		if(checkForWin()) {
 			view.printWinner(false);
+			clearBoard();
 		}
 		return true;
 	}
