@@ -53,6 +53,10 @@ public class Game {
 		return output;
 	}
 	
+	public Scanner getScanner() {
+		return null;
+	}
+	
 	public boolean isFieldFree(int x, int y) {
 		return board.getField(x, y).getValue() == FieldState.Empty;
 	}
