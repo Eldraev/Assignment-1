@@ -83,6 +83,22 @@ public class GameTests {
 	}
 	
 	@Test
+	public void shouldFindTie() {
+		View mockView = mock(View.class);
+		Game g = new Game(mockView);
+		g.setField(1, 1, FieldState.Cross);
+		g.setField(1, 2, FieldState.Circle);
+		g.setField(1, 3, FieldState.Cross);
+		g.setField(2, 1, FieldState.Circle);
+		g.setField(2, 2, FieldState.Cross);
+		g.setField(2, 3, FieldState.Circle);
+		g.setField(3, 1, FieldState.Circle);
+		g.setField(3, 2, FieldState.Cross);
+		g.setField(3, 3, FieldState.Circle);
+		assertTrue(g.isTie());
+	}
+	
+	@Test
 	public void shouldSetACircleAt11ByPlaying() {
 		System.setIn(new ByteArrayInputStream("1 1".getBytes()));
 		Game g = new Game(new View());
