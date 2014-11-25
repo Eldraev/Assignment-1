@@ -144,6 +144,13 @@ public class ViewTests {
 		verify(mockStream).println("You lost the game. Press Enter to play again.");
 	}
 	
+	@Test
+	public void shouldPrintError() {
+		View v = new View();
+		v.printError();
+		verify(mockStream).println("Wrong Input please try again.");
+	}
+	
 	@After
 	public void resetOutput() {
 		System.setOut(originalOutput);
