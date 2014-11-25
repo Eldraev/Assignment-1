@@ -151,6 +151,13 @@ public class ViewTests {
 		verify(mockStream).println("Wrong Input please try again.");
 	}
 	
+	@Test
+	public void shouldPrintTie() {
+		View v = new View();
+		v.printTie();
+		verify(mockStream).println("The match is a tie. Press Enter to play again.");
+	}
+	
 	@After
 	public void resetOutput() {
 		System.setOut(originalOutput);
