@@ -400,6 +400,13 @@ public class GameTests {
 	 }
 	 
 	 @Test
+	 public void shouldGiveWrongRowImput() {
+		 System.setIn(new ByteArrayInputStream("1 -1".getBytes()));
+		 Game g = new Game(new View());
+		 assertFalse(g.play());
+	 }
+	 
+	 @Test
 	 public void shouldFindWinOnDiagonal() {
 		 Game g = new Game(new View());
 		 g.setField(1, 1, FieldState.Cross);
