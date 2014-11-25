@@ -19,23 +19,24 @@ public class Game {
 		playing = true;
 	}
 	
-	public void play() {
+	public boolean play() {
 		view.drawBoard(board.getBoardArray());
 		view.notifyPlayer();
 		view.askForColumn();
 		try {
 			getInput();
 		} catch(IllegalArgumentException e) {
-			
+			return false;
 		}
 		view.askForRow();
 		try {
 			getInput();
 		} catch(IllegalArgumentException e) {
-			
+			return false;
 		}
 		doAITurn();
 		doAITurn();
+		return true;
 	}
 	
 	public int getInput() {
@@ -108,7 +109,7 @@ public class Game {
 			&& board.getField(1, i).getValue() == board.getField(2, i).getValue() 
 			&& board.getField(0, i).getValue() != FieldState.Empty)
 		return true;
-	}
+		}
 		return false;
 	}
 	
