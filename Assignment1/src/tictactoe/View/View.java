@@ -27,7 +27,7 @@ public class View {
 		switch(fs) {
 		case Circle: System.out.print("O"); break;
 		case Cross: System.out.print("X"); break;
-		case Empty: System.out.print(" "); break;
+		case Empty: System.out.print("  "); break;
 		}
 	}
 	
