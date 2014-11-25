@@ -6,7 +6,8 @@ import tictactoe.View.View;
 public class TicTacToeMain {
 	
 	public void launch(Game g) {
-		g.play();
+		while(g.isPlaying())
+			g.play();
 	}
 	
 }
