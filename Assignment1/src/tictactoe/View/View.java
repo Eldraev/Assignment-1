@@ -42,6 +42,10 @@ public class View {
 		}
 	}
 	
+	public void printError() {
+		System.out.println("Wrong Input please try again.");
+	}
+	
 	public void printWinner(boolean playerWon) {
 		if(playerWon)
 			System.out.println("You won the game. Press Enter to play again.");
