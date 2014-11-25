@@ -52,9 +52,9 @@ public class View {
 	
 	public void printWinner(boolean playerWon) {
 		if(playerWon)
-			System.out.println("You won the game. Press Enter to play again.");
+			System.out.println("You won the game. A new game has been started.");
 		else
-			System.out.println("You lost the game. Press Enter to play again.");
+			System.out.println("You lost the game. A new game has been started.");
 	}
 	
 }
