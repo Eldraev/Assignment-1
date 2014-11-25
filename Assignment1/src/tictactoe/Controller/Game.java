@@ -26,12 +26,14 @@ public class Game {
 		try {
 			getInput();
 		} catch(IllegalArgumentException e) {
+			view.printError();
 			return false;
 		}
 		view.askForRow();
 		try {
 			getInput();
 		} catch(IllegalArgumentException e) {
+			view.printError();
 			return false;
 		}
 		doAITurn();
