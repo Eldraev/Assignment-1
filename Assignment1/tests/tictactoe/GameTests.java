@@ -257,9 +257,9 @@ public class GameTests {
 		 assertFalse(g.isPlaying());
 	 }
 	 
-	@After
-	public void resetOutput() {
-		System.setIn(originalInput);
-	}
+	 @After
+	 public void resetOutput() {
+		 System.setIn(originalInput);
+	 }
 	
 }
