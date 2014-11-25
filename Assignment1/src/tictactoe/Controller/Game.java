@@ -153,7 +153,17 @@ public class Game {
 	}
 	
 	public boolean isTie() {
-		return false;
+		for(int y=0;y<3;y++) {
+			for(int x=0;x<3;x++) {
+				if(board.getField(x, y).getValue() == FieldState.Empty)
+					return false;
+			}
+		}
+		if(checkForWin()) {
+			return false;
+		}
+		else
+			return true;
 	}
 	
 }
