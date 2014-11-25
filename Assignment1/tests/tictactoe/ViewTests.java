@@ -51,7 +51,7 @@ public class ViewTests {
 	
 	@Test
 	public void shouldPrintFieldState() {
-		testFieldStateOutput(FieldState.Circle, "O");
+		testFieldStateOutput(FieldState.Circle, "O ");
 		testFieldStateOutput(FieldState.Cross, "X ");
 		testFieldStateOutput(FieldState.Empty, "  ");
 	}
