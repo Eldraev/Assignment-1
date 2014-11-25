@@ -2,6 +2,7 @@ package tictactoe;
 
 import static org.junit.Assert.*;
 
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
@@ -21,6 +22,7 @@ public class MainTests {
 	
 	@Test
 	public void shouldCallLauncher() {
+		System.setIn(new ByteArrayInputStream("1 1".getBytes()));
 		new TicTacToeMain().launch(new Game(new View()));
 	}
 	
