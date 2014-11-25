@@ -39,12 +39,10 @@ public class Game {
 			return false;
 		}
 		doAITurn();
-		doAITurn();
 		return true;
 	}
 	
 	public int getInput() {
-		setScanner(new Scanner(System.in));
 		int output = -1;
 		if(scan.hasNextInt())
 			output = scan.nextInt();
