@@ -46,13 +46,8 @@ public class Game {
 			view.printError();
 			return false;
 		}
-		if(checkForWin()) {
-			view.printWinner(true);
-		}
 		doAITurn();
-		if(checkForWin()) {
-			view.printWinner(false);
-		}
+		view.printWinner(true);
 		return true;
 	}
 	
