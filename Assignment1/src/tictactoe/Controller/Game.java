@@ -40,7 +40,11 @@ public class Game {
 			view.printError();
 			return false;
 		}
+		try{
 		setField(inRow,inCol,FieldState.Circle);
+		} catch (IllegalArgumentException e) {
+			view.printError();
+		}
 		doAITurn();
 		return true;
 	}
