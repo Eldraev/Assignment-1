@@ -80,8 +80,8 @@ public class GameTests {
 	@Test
 	public void shouldReturnParsedNumber() {
 		int testInt = 2;
-		Game g = new Game(new View());
 		System.setIn(new ByteArrayInputStream( (testInt+"").getBytes()));
+		Game g = new Game(new View());
 		int i = g.getInput();
 		assertEquals(i,testInt);
 	}
