@@ -78,6 +78,15 @@ public class GameTests {
 	}
 	
 	@Test
+	public void shouldSetACircleAt11ByPlaying() {
+		System.setIn(new ByteArrayInputStream("1 1".getBytes()));
+		Game g = new Game(new View());
+		g.play();
+		Field[][] f = g.getBoard().getBoardArray();
+		assertEquals(f[0][0].getValue(),FieldState.Circle);
+	}
+	
+	@Test
 	public void shouldReturnParsedNumber() {
 		int testInt = 2;
 		System.setIn(new ByteArrayInputStream( (testInt+"").getBytes()));
