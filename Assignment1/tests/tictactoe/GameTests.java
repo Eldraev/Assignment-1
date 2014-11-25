@@ -108,6 +108,17 @@ public class GameTests {
 	}
 	
 	@Test
+	public void shouldLetPlayerWin() {
+		System.setIn(new ByteArrayInputStream("1 1".getBytes()));
+		View mockView = mock(View.class);
+		Game g = new Game(mockView);
+		g.setField(1, 2, FieldState.Circle);
+		g.setField(1, 3, FieldState.Circle);
+		g.play();
+		verify(mockView).printWinner(true);
+	}
+	
+	@Test
 	public void shouldReturnParsedNumber() {
 		int testInt = 2;
 		System.setIn(new ByteArrayInputStream( (testInt+"").getBytes()));
