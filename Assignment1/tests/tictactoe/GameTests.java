@@ -33,6 +33,9 @@ public class GameTests {
 	}
 	
 	@Test
+	public void should
+	
+	@Test
 	public void shouldAskForInputAfterDialog() {
 		View mockView = mock(View.class);
 		Game g = new Game(mockView);
@@ -149,13 +152,6 @@ public class GameTests {
 	 }
 	 
 	 @Test
-	 public void shouldComputeAITurn() {
-		 Game g = new Game(new View());
-		 g.doAITurn();
-		 
-	 }
-	 
-	 @Test
 	 public void shouldLessEmptyFieldsAfterAITurn() {
 		 Game g = new Game(new View());
 		 g.doAITurn();
@@ -180,12 +176,6 @@ public class GameTests {
 			 }
 		 }
 		 assertTrue(previousEmpty>emptyCounter);
-	 }
-	 
-	 @Test
-	 public void shouldCallCheckForWin() {
-		 Game g = new Game(new View());
-		 g.checkForWin();
 	 }
 	 
 	 @Test
