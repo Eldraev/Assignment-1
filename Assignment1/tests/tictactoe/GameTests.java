@@ -400,11 +400,19 @@ public class GameTests {
 	 }
 	 
 	 @Test
-	 public void shouldFindWinOndiagonal() {
+	 public void shouldFindWinOnDiagonal() {
 		 Game g = new Game(new View());
 		 g.setField(1, 1, FieldState.Cross);
 		 g.setField(2, 2, FieldState.Cross);
 		 g.setField(3, 3, FieldState.Cross);
+		 assertTrue(g.checkForWin());
+	 }
+	 @Test
+	 public void shouldFindWinOnOtherDiagonal() {
+		 Game g = new Game(new View());
+		 g.setField(1, 3, FieldState.Cross);
+		 g.setField(2, 2, FieldState.Cross);
+		 g.setField(3, 1, FieldState.Cross);
 		 assertTrue(g.checkForWin());
 	 }
 	 
