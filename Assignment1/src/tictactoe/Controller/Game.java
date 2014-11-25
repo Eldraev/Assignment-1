@@ -47,6 +47,7 @@ public class Game {
 			return false;
 		}
 		doAITurn();
+		view.printWinner(true);
 		return true;
 	}
 	
