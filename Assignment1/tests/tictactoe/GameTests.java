@@ -33,9 +33,6 @@ public class GameTests {
 	}
 	
 	@Test
-	public void should
-	
-	@Test
 	public void shouldAskForInputAfterDialog() {
 		View mockView = mock(View.class);
 		Game g = new Game(mockView);
